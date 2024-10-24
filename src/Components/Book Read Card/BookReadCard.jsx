@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getDatafromLocalstorage } from '../../Utility/LocalStorage';
 import { useLoaderData } from 'react-router-dom';
+import BookReadCard_1 from './BookReadCard_1';
 
 export default function BookReadCard() {
     const [selectedBook, setSelectedBook] = useState([]);
@@ -12,7 +13,7 @@ export default function BookReadCard() {
 
     // Fetch selected books only once when component mounts
     useEffect(() => {
-        const booksFromLocalStorage = getDatafromLocalstorage();
+        const booksFromLocalStorage = getDatafromLocalstorage("book-read");
         console.log('Selected Books from localStorage:', booksFromLocalStorage);
         setSelectedBook(booksFromLocalStorage);
     }, []); // Empty dependency array ensures this runs only once
@@ -37,14 +38,10 @@ export default function BookReadCard() {
     console.log('Read Books:', Read);
 
     return (
-        <div>
+        <div className='grid grid-cols-3'>
             {Read.length > 0 ? (
-                Read.map((book, index) => (
-                    <div key={index} className="p-4 border rounded shadow">
-                        <h2 className="text-lg font-bold">{book.title}</h2>
-                        <p>Author: {book.author}</p>
-                        <p>Book ID: {book.bookId}</p>
-                    </div>
+                Read.map((bookreadcard, index) => (
+                   <BookReadCard_1 key={index} bookreadcard={bookreadcard}></BookReadCard_1>
                 ))
             ) : (
                 <p>No books selected to display.</p>

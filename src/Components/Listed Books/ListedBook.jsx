@@ -1,17 +1,19 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
 
 export default function ListedBook() {
+  const [isClick, setIsClick] = useState(true);
+  
   return (
     <>
-      <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+      <div className="dark:m-10 flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap dark:bg-gray-800 dark:text-gray-200">
         
-        {/* Architecto NavLink */}
+        {/* Read NavLink */}
         <NavLink 
           to="bookreadcard" 
           className={({ isActive }) => 
-            `flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-600 
-            ${isActive ? 'border border-b-0 rounded-t-lg dark:border-gray-600' : 'border-b dark:border-gray-600'}`
+            `flex items-center flex-shrink-0 px-5 py-3 space-x-2 transition-colors duration-200
+            ${isActive ? 'border-b-0 rounded-t-lg bg-blue-500 text-white dark:bg-blue-700' : 'border-b dark:border-gray-600 text-gray-600 hover:bg-blue-100 dark:hover:bg-gray-700'}`
           }
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -20,12 +22,12 @@ export default function ListedBook() {
           <span>Read</span>
         </NavLink>
         
-        {/* Corrupti NavLink */}
+        {/* WishList NavLink */}
         <NavLink 
           to="bookwishlist" 
           className={({ isActive }) => 
-            `flex items-center flex-shrink-0 px-5 py-3 space-x-2 dark:text-gray-900 
-            ${isActive ? 'border border-b-0 rounded-t-lg dark:border-gray-600' : 'border-b dark:border-gray-600'}`
+            `flex items-center flex-shrink-0 px-5 py-3 space-x-2 transition-colors duration-200
+            ${isActive ? 'border-b-0 rounded-t-lg bg-blue-500 text-white dark:bg-blue-700' : 'border-b dark:border-gray-600 text-gray-600 hover:bg-blue-100 dark:hover:bg-gray-700'}`
           }
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
