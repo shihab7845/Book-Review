@@ -1,22 +1,22 @@
 [
-    {
-      "bookId": 1,
-      "bookName": "The Adventures of Time",
-      "author": "John Doe",
-      "image": "/images/feature_books/Book_1.png",
-      "review": "An exciting journey through space and time, where unexpected turns keep the reader engaged.",
-      "totalPages": 300,
-      "rating": 4.5,
-      "category": "Fiction",
-      "tags": ["Adventure", "Mystery"],
-      "publisher": "Galaxy Press",
-      "yearOfPublishing": 2021
-    },
+  {
+    "bookId": 1,
+    "bookName": "The Adventures of Time",
+    "author": "John Doe",
+    "image": "https://m.media-amazon.com/images/I/91moQMk4z2L._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
+    "review": "An exciting journey through space and time, where unexpected turns keep the reader engaged.",
+    "totalPages": 300,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Adventure", "Mystery"],
+    "publisher": "Galaxy Press",
+    "yearOfPublishing": 2021
+  },
     {
       "bookId": 2,
       "bookName": "The Life of a Legend",
       "author": "Jane Smith",
-      "image": "/images/feature_books/Book_2.png",
+      "image": "https://m.media-amazon.com/images/I/81PRu+I5QTL._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
       "review": "A captivating biography that delves into the life of a true inspiration.",
       "totalPages": 250,
       "rating": 4.0,
